@@ -1,0 +1,8 @@
+C:\Users\jorda\source\bannerlord\TaleWorlds XML Parser\obj\Debug\TaleWorlds XML Parser.csprojAssemblyReference.cache
+C:\Users\jorda\source\bannerlord\TaleWorlds XML Parser\obj\Debug\TaleWorldsXMLParser.Properties.Resources.resources
+C:\Users\jorda\source\bannerlord\TaleWorlds XML Parser\obj\Debug\TaleWorlds XML Parser.csproj.GenerateResource.cache
+C:\Users\jorda\source\bannerlord\TaleWorlds XML Parser\bin\Debug\TaleWorlds XML Parser.exe.config
+C:\Users\jorda\source\bannerlord\TaleWorlds XML Parser\bin\Debug\TaleWorlds XML Parser.exe
+C:\Users\jorda\source\bannerlord\TaleWorlds XML Parser\bin\Debug\TaleWorlds XML Parser.pdb
+C:\Users\jorda\source\bannerlord\TaleWorlds XML Parser\obj\Debug\TaleWorlds XML Parser.exe
+C:\Users\jorda\source\bannerlord\TaleWorlds XML Parser\obj\Debug\TaleWorlds XML Parser.pdb
