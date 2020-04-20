@@ -7,17 +7,11 @@ using TaleWorldsXMLParser.Framework;
 
 namespace TaleWorldsXMLParser.Culture
 {
-    public class CultureParser : Framework.IXMLParser<Element>
+    public class CultureParser : AbstractXmlParser<Element>
     {
         public const string XML_PARSER = "SPCultures";
 
-        protected string filepath;
-        protected string filename;
-        protected XElement backup;
         protected List<Culture> cultures = new List<Culture>();
-
-        public string AbsolutePath => filepath + filename + ".xml";
-        public string BackupPath => filepath + filename + " - Backup.xml";
 
         #region Constructors
         /// <summary>
@@ -25,7 +19,7 @@ namespace TaleWorldsXMLParser.Culture
         /// </summary>
         /// <param name="filepath"> Path of the file directory.</param>
         /// <param name="filename"> name of the file.</param>
-        public CultureParser(string filepath, string filename)
+        public CultureParser(string filepath, string filename) : base(filepath, filename)
         {
             Initialize(filepath, filename);   
             this.Load(AbsolutePath);
@@ -36,19 +30,13 @@ namespace TaleWorldsXMLParser.Culture
 
         }
         #endregion Constructors
-        /// <summary>
-        /// Method to initialize all variables needed to parse a file.
-        /// </summary>
-        /// <param name="filepath"> Path of the file directory.</param>
-        /// <param name="filename"> name of the file.</param>
-        protected void Initialize(string filepath, string filename)
-        {
-            this.filepath = filepath[filepath.Length - 1] == '\\' ? filepath : filepath + "\\";
-            this.filename = filename.Contains(".xml") ? filename.Replace(".xml", "") : filepath;
-        }
 
         #region File Operations
-        public void Load(string filepath)
+        /// <summary>
+        /// Method to load the xml file at the given path.
+        /// </summary>
+        /// <param name="filepath"></param>
+        public override void Load(string filepath)
         {
             XElement xmlDocument = XElement.Load(filepath);
             this.backup = xmlDocument;
@@ -58,18 +46,19 @@ namespace TaleWorldsXMLParser.Culture
                 cultures.Add(new Culture(culture));
             }
         }
-        public void UndoChanges()
+        /// <summary>
+        /// Method to undo any changes donee to far.
+        /// </summary>
+        public override void UndoChanges()
         {
             XDocument doc = new XDocument(backup);
             doc.Save(AbsolutePath);
             Load(AbsolutePath);
         }
-        public void RestoreBackup()
-        {
-            Load(BackupPath);
-            Save();
-        }
-        public void Save()
+        /// <summary>
+        /// Method to go through each xml element and save to a file.
+        /// </summary>
+        public override void Save()
         {
             XElement xCultures = new XElement(XML_PARSER);
             foreach(var culture in cultures)
@@ -88,16 +77,16 @@ namespace TaleWorldsXMLParser.Culture
         /// Method to retrieve culture by Id.
         /// </summary>
         /// <param name="id">The id of the culture.</param>
-        public IXMLObject<Element> Get(string id) => cultures.Find(culture => culture.Id == id);
+        public override IXMLObject<Element> Get(string id) => cultures.Find(culture => culture.Id == id);
         /// <summary>
         /// Method to retrieve all cultures.
         /// </summary>
-        public List<IXMLObject<Element>> GetAll() => cultures.Select(culture => (IXMLObject<Element>)culture).ToList();
+        public override List<IXMLObject<Element>> GetAll() => cultures.Select(culture => (IXMLObject<Element>)culture).ToList();
         /// <summary>
         /// Method to update a culture with new data.
         /// </summary>
         /// <param name="xmlObject">The object to update the culture with. </param>
-        public void Update(IXMLObject<Element> xmlObject)
+        public override void Update(IXMLObject<Element> xmlObject)
         {
             var culture = cultures.Find(c => c.Id == xmlObject.Id);
             culture.Attributes = xmlObject.Attributes;
@@ -107,7 +96,7 @@ namespace TaleWorldsXMLParser.Culture
         /// Method to remove the selected culture.
         /// </summary>
         /// <param name="id">The culture to remove.</param>
-        public void Delete(string id) => cultures.RemoveAll(culture => culture.Id == id);
+        public override void Delete(string id) => cultures.RemoveAll(culture => culture.Id == id);
         #endregion Data Operations
     }
 }

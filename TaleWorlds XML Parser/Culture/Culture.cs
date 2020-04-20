@@ -19,7 +19,7 @@ namespace TaleWorldsXMLParser.Culture
         {
             Attributes = new Dictionary<string, string>();
             Elements = new Dictionary<Element, Framework.IXMLCollection>();
-
+            //initialize elements dictionary.
             for (Element e = Element.maleNames; e <= Element.clanNames; e++)
             {
                 Elements.Add(e, e.NewCollection());
@@ -27,11 +27,13 @@ namespace TaleWorldsXMLParser.Culture
 
             Id = culture.Attributes().ToList()[0].Value;
 
+            //foreach attribute, add it to the attributes dictionary.
             foreach (var attribute in culture.Attributes())
             {
                 Attributes.Add(attribute.Name.ToString(), attribute.Value);
             }
 
+            //foreach name child, parse through each child and add it to the collection. 
             foreach (var element in culture.Elements())
             {
                 var actualElement = Elements[element.Name.ToString().ToElement()];
@@ -44,7 +46,10 @@ namespace TaleWorldsXMLParser.Culture
 
             }
         }
-
+        /// <summary>
+        /// Method to go through each xml object and attribute to save to this xml object.
+        /// </summary>
+        /// <returns>Returns an xml object for this structure. </returns>
         public XElement Save()
         {
             XElement culture = new XElement(XML_CULTURE);

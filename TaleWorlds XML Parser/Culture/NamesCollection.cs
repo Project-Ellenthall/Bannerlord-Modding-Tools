@@ -48,6 +48,10 @@ namespace TaleWorldsXMLParser.Culture
             _ = newItems.Contains(id) ? newItems.Remove(id) : existingItems.Remove(id);
         }
 
+        /// <summary>
+        /// Method to go through each name value and save to this xml element.
+        /// </summary>
+        /// <returns></returns>
         public XElement Save()
         {
             XElement root = new XElement(CollectionName);

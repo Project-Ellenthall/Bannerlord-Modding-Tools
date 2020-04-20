@@ -57,6 +57,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Framework\AbstractXmlParser.cs" />
     <Compile Include="Framework\BannerlordXmlException.cs" />
     <Compile Include="Framework\Generator.cs" />
     <Compile Include="Framework\IXMLCollection.cs" />
