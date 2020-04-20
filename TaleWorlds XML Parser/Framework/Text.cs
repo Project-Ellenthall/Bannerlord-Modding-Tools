@@ -23,8 +23,13 @@ namespace TaleWorldsXMLParser.Framework
         public Text(string text)
         {
             var match = idRegex.Match(text);
-            this.Id = match.Groups[0].Value;
-            this.Value = match.Groups[1].Value;
+            this.Id = match.Groups[1].Value;
+            this.Value = match.Groups[2].Value;
+        }
+
+        public string ToXmlText()
+        {
+            return "{=" + Id + "}" + Value;
         }
     }
 }

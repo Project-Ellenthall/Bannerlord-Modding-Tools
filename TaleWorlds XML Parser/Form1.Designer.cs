@@ -1,4 +1,4 @@
-﻿namespace TaleWorlds_XML_Parser
+﻿namespace TaleWorldsXMLParser
 {
     partial class Form1
     {

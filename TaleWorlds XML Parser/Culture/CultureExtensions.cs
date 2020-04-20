@@ -7,11 +7,11 @@
             switch(element)
             {
                 case Element.clanNames:
-                    return "clan names";
+                    return "clan_names";
                 case Element.femaleNames:
-                    return "female names";
+                    return "female_names";
                 default:
-                    return "male names";
+                    return "male_names";
             }
         }
 
@@ -19,18 +19,18 @@
         {
             switch (element)
             {
-                case "clan names":
+                case "clan_names":
                     return Element.clanNames;
-                case "female names":
+                case "female_names":
                     return Element.femaleNames;
-                case "male names":
+                case "male_names":
                     return Element.maleNames;
                 default:
                     throw new Framework.BannerlordXmlException("XML Error: Unknown element detected: " + element);
             }
         }
 
-        public static Framework.ICollection NewCollection(this Element element)
+        public static Framework.IXMLCollection NewCollection(this Element element)
         {
             switch (element)
             {

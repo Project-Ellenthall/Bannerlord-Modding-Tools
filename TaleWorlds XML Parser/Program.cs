@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TaleWorlds_XML_Parser
+namespace TaleWorldsXMLParser
 {
     static class Program
     {

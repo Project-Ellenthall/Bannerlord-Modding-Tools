@@ -2,7 +2,7 @@
 
 namespace TaleWorldsXMLParser.Framework
 {
-    public interface ICollection
+    public interface IXMLCollection
     {
         void AddNew(object value);
         void AddExisting(string id, object value);

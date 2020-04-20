@@ -46,10 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Culture\Culture.cs" />
     <Compile Include="Culture\CultureExtensions.cs" />
     <Compile Include="Culture\CultureParser.cs" />
     <Compile Include="Culture\Elements.cs" />
-    <Compile Include="Culture\Names.cs" />
+    <Compile Include="Culture\NamesCollection.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,7 +59,8 @@
     </Compile>
     <Compile Include="Framework\BannerlordXmlException.cs" />
     <Compile Include="Framework\Generator.cs" />
-    <Compile Include="Framework\ICollection.cs" />
+    <Compile Include="Framework\IXMLCollection.cs" />
+    <Compile Include="Framework\IXMLObject.cs" />
     <Compile Include="Framework\IXmlParser.cs" />
     <Compile Include="Framework\Text.cs" />
     <Compile Include="Program.cs" />

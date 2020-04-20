@@ -1,0 +1,16 @@
+C:\Users\jorda\source\bannerlord\Unit Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\jorda\source\bannerlord\Unit Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\jorda\source\bannerlord\Unit Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\jorda\source\bannerlord\Unit Tests\bin\Debug\Unit Tests.dll
+C:\Users\jorda\source\bannerlord\Unit Tests\bin\Debug\Unit Tests.pdb
+C:\Users\jorda\source\bannerlord\Unit Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\jorda\source\bannerlord\Unit Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\jorda\source\bannerlord\Unit Tests\bin\Debug\TaleWorlds XML Parser.exe
+C:\Users\jorda\source\bannerlord\Unit Tests\bin\Debug\TaleWorlds XML Parser.pdb
+C:\Users\jorda\source\bannerlord\Unit Tests\bin\Debug\TaleWorlds XML Parser.exe.config
+C:\Users\jorda\source\bannerlord\Unit Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\jorda\source\bannerlord\Unit Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\jorda\source\bannerlord\Unit Tests\obj\Debug\Unit Tests.csprojAssemblyReference.cache
+C:\Users\jorda\source\bannerlord\Unit Tests\obj\Debug\Unit Tests.csproj.CopyComplete
+C:\Users\jorda\source\bannerlord\Unit Tests\obj\Debug\Unit Tests.dll
+C:\Users\jorda\source\bannerlord\Unit Tests\obj\Debug\Unit Tests.pdb
