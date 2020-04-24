@@ -46,11 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Culture\Culture.cs" />
-    <Compile Include="Culture\CultureExtensions.cs" />
-    <Compile Include="Culture\CultureParser.cs" />
-    <Compile Include="Culture\Elements.cs" />
-    <Compile Include="Culture\NamesCollection.cs" />
+    <Compile Include="Characters\CharacterParser.cs" />
+    <Compile Include="Characters\NPCCharacters.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,7 +87,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Characters\" />
     <Folder Include="Items\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
